@@ -1,13 +1,10 @@
 JAMESPC
     bash script to count total word count in folder: wc -l | awk and injected into python (or maybe use read file GTFOBin in combination with * param injection?)
-        -> If hosted on webserver
-            -> Requires file write
-        -> Gives arbitrary file read
-
-
     Data redundancy - name of file stored in save file
-        -> Gives file write
+        -> Get php reverse shell
 
+
+React CSRF with different client side pages
 
 Race condition with CTRL-C bash script causing the child process to still exist (basically I ran ctrl-c on my ssh script and it ran the ssh client even though i control c'd so i could type in terminal while ssh client was running)
 
@@ -43,3 +40,7 @@ Binary search flag with code golf
 Change process string in read only file system
 
 Predict git hash with hash length extension
+
+RCE via deserialization gadget injection into /proc/self/environ
+
+WASM buffer overflow
