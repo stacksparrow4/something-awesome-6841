@@ -9,7 +9,8 @@ RUN mkdir /var/www/petsite
 COPY data-redundancy /var/www/petsite/
 RUN chown -R www-data:www-data /var/www/petsite
 
-COPY nginx/petsite.conf /etc/nginx/sites-available/petsite
+COPY config/php-fpm.conf /etc/php/7.4/fpm/php-fpm.conf
+COPY config/petsite.conf /etc/nginx/sites-available/petsite
 
 RUN ln -s /etc/nginx/sites-available/petsite /etc/nginx/sites-enabled/
 RUN unlink /etc/nginx/sites-enabled/default
