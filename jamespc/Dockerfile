@@ -28,9 +28,16 @@ RUN echo 'www-data ALL=(james) NOPASSWD: /home/james/totalwc.sh' >> /etc/sudoers
 
 RUN echo james:BgLJTDLLFigGdUgd | chpasswd
 
+# setup pycache_override
+RUN mkdir admincmd && \
+    chown james:james admincmd
+COPY pycache_override /home/james/admincmd/
+
+RUN echo 'james ALL=(ALL) NOPASSWD: /home/james/admincmd/checkstats' >> /etc/sudoers
+
 WORKDIR /
 
 # setup supervisord
 COPY supervisord.conf /etc/supervisor/supervisord.conf
 
-CMD mkdir -p /run/php/ && service ssh start && supervisord -c /etc/supervisor/supervisord.conf
+CMD mkdir -p /run/php/ && chattr +i /home/james/admincmd/checkstats /home/james/admincmd/util.py && service ssh start && supervisord -c /etc/supervisor/supervisord.conf

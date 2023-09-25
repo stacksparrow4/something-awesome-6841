@@ -2,6 +2,9 @@ JAMESPC
     bash script to count total word count in folder: wc -l | awk and injected into python (or maybe use read file GTFOBin in combination with * param injection?)
     Data redundancy - name of file stored in save file
         -> Get php reverse shell
+    Python pycache override
+
+    DONE!
 
 
 React CSRF with different client side pages
@@ -26,8 +29,6 @@ Read only file system process changing
 self pollution using locals() in python class
 
 Different cookie csrf protection options
-
-Python pycache override
 
 COMBINE:
 Window.name chal
