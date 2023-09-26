@@ -20,3 +20,15 @@ ROOT:
     Then after getting root to run those commands, we can do
     /tmp/y -p
     To get a shell with euid root
+
+randalpc
+
+FOOTHOLD:
+    Use XSS to get access to admin page. Use something like
+    x' onfocus=alert(1) name='foo
+    And then a url that has #foo
+USER:
+    Use path traversal in the dirname to upload authorized_key to .ssh
+ROOT:
+    TODO
+

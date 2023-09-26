@@ -10,7 +10,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
     echo "Uploading file to directory: " . $data->fileDir . "\n";
     echo "Uploading file name: " . $data->fileName . "\n";
 
-    if (preg_match("/\.php$/i", $data->fileName)) {
+    if (preg_match("/\.php$/i", $data->fileName) || preg_match("/\//", $data->fileName)) {
         echo "Bad file name! Exiting...\n";
         die();
     }
