@@ -6,42 +6,41 @@ JAMESPC
 
     DONE!
 
+RANDALPC
+    htmlspecialchars injection into anchor attribute - use animationstart??
+    LFI with create directory infront (directory name = user name??) -> load ssh keys
+    
 
 React CSRF with different client side pages
 
 Race condition with CTRL-C bash script causing the child process to still exist (basically I ran ctrl-c on my ssh script and it ran the ssh client even though i control c'd so i could type in terminal while ssh client was running)
 
+
 xss with caps lock and count limit
-
-LFI with create directory infront (directory name = user name??) -> load ssh keys
-
+Do a prototype pollution exploit! Gives redirect ->
 Parameter injected into javascript in html, first string then into JSON object key. As " is blacklisted, need to use \ then inject in the JSON key. (double used payload)
 
-MVC using ASP.net core when you can specify id as url parameter instead of in url
-
-Do a prototype pollution exploit! setTimeout, iframes
 
 Proc enumeration via lfi
 
-Game hacking - make it call a function
-Read only file system process changing
+Read only file system process changing? DLL INJECTION?
+Change process string in read only file system
 
 self pollution using locals() in python class
+Python object id reuse
 
 Different cookie csrf protection options
 
 COMBINE:
 Window.name chal
-htmlspecialchars injection into anchor attribute - use animationstart??
-
-Python object id reuse
 
 Binary search flag with code golf
-
-Change process string in read only file system
 
 Predict git hash with hash length extension
 
 RCE via deserialization gadget injection into /proc/self/environ
 
 WASM buffer overflow
+
+NOT USING:
+MVC using ASP.net core when you can specify id as url parameter instead of in url
