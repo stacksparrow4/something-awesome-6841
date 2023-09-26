@@ -10,3 +10,11 @@ RUN apt update \
     --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
+# Setup XSS bot
+WORKDIR /app
+COPY package.json package-lock.json ./
+RUN npm ci
+
+COPY ./ ./
+
+CMD node index.js

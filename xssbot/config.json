@@ -1,0 +1,10 @@
+{
+    "c8b65101957f50df0984322aecced18597d417f3970fce4b113037e646855f4c": {
+        "baseurl": "http://randalpc",
+        "cookie": {
+            "name": "admin_token",
+            "value": "bfdbjknsdnfbjaefanefgueaigahneg",
+            "domain": "randalpc"
+        }
+    }
+}
