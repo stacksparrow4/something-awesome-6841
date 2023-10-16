@@ -31,10 +31,17 @@ USER:
     Use path traversal in the dirname to upload authorized_key to .ssh
 ROOT:
     TODO
-    Maybe my pwn chal
 
 
 tompc:
 
 FOOTHOLD:
     Get password using CAPS lock XSS
+
+
+startingpoint:
+
+FOOTHOLD:
+    I give a zip file to crack
+    The zip file contains a png file of the internal network
+    Credentials to join the foothold machine are there too

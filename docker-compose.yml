@@ -1,0 +1,13 @@
+version: '3.4'
+services:
+  jamespc:
+    build: ./jamespc
+    cap_add:
+      - LINUX_IMMUTABLE
+    
+  randalpc:
+    build: ./randalpc
+  xssbot:
+    build: ./xssbot
+  startingpoint:
+    build: ./startingpoint
