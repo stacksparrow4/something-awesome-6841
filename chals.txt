@@ -9,17 +9,23 @@ JAMESPC
 RANDALPC
     htmlspecialchars injection into anchor attribute - use animationstart??
     LFI with create directory infront (directory name = user name??) -> load ssh keys
-    
+
+TOMPC
+    xss with caps lock and count limit
+
+
+PWN
+Env var stack shift
+
 
 Express JS path traversal in url segment
-Env var stack shift
 
 React CSRF with different client side pages
 
 Race condition with CTRL-C bash script causing the child process to still exist (basically I ran ctrl-c on my ssh script and it ran the ssh client even though i control c'd so i could type in terminal while ssh client was running)
 
 
-xss with caps lock and count limit
+Binary search flag with code golf
 Do a prototype pollution exploit! Gives redirect ->
 Parameter injected into javascript in html, first string then into JSON object key. As " is blacklisted, need to use \ then inject in the JSON key. (double used payload)
 
@@ -36,8 +42,6 @@ Different cookie csrf protection options
 
 COMBINE:
 Window.name chal
-
-Binary search flag with code golf
 
 Predict git hash with hash length extension
 

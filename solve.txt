@@ -32,3 +32,8 @@ USER:
 ROOT:
     TODO
 
+
+tompc:
+
+FOOTHOLD:
+    Get password using CAPS lock XSS
