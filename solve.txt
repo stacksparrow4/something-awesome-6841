@@ -31,6 +31,7 @@ USER:
     Use path traversal in the dirname to upload authorized_key to .ssh
 ROOT:
     TODO
+    Maybe my pwn chal
 
 
 tompc:

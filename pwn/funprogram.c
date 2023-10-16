@@ -4,6 +4,6 @@ int main() {
   char buf[4];
 
   printf("Enter an integer:\n");
-  fgets(buf, 10, stdin);
+  scanf("%10s", buf);
   puts(buf);
 }
