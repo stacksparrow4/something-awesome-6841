@@ -9,6 +9,7 @@ JAMESPC
 RANDALPC
     htmlspecialchars injection into anchor attribute - use animationstart??
     LFI with create directory infront (directory name = user name??) -> load ssh keys
+    RCE via deserialization gadget injection into /proc/self/environ
 
 TOMPC
     xss with caps lock and count limit
@@ -48,8 +49,6 @@ COMBINE:
 Window.name chal
 
 Predict git hash with hash length extension
-
-RCE via deserialization gadget injection into /proc/self/environ
 
 WASM buffer overflow
 

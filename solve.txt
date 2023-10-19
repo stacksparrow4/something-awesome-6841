@@ -32,7 +32,7 @@ FOOTHOLD:
 USER:
     Use path traversal in the dirname to upload authorized_key to .ssh
 ROOT:
-    TODO
+    Exploit safepickle.py
 
 
 tompc:
