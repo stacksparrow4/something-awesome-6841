@@ -7,7 +7,15 @@ services:
     
   randalpc:
     build: ./randalpc
+
   xssbot:
     build: ./xssbot
+
   startingpoint:
     build: ./startingpoint
+
+  tompc:
+    build: ./tompc
+
+  jwtbot:
+    build: ./tompc/discordbot
