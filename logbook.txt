@@ -19,3 +19,6 @@
 17/10/2023
     7am - 7:30am
     8am - 10am Finished pwn challenge and added it to a startingpoint machine. Also Tompc gets an xss chal
+
+19/10/2023:
+    1:30pm - 

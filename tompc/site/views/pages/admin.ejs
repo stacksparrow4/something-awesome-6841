@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../partials/head'); %>
+</head>
+<body class="container">
+
+<header>
+  <%- include('../partials/header'); %>
+</header>
+
+<main>
+  <div class="jumbotron">
+    <h1>Admin</h1>
+    <p>Welcome admin!</p>
+    <a href="/view_source">View the source code</a>
+
+    <p>Debug</p>
+    <input id="inpname">
+    <button onclick="clickbtn()">Send</button>
+
+    <pre id="response"></pre>
+    
+    <script>
+      const clickbtn = () => {
+        fetch("/debug", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            name: inpname.value
+          })
+        }).then(resp => resp.text()).then(t => response.innerText = t);
+      }
+    </script>
+    </div>
+</main>
+
+</body>
+</html>

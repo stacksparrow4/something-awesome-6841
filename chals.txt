@@ -12,10 +12,11 @@ RANDALPC
 
 TOMPC
     xss with caps lock and count limit
+    Parameter injected into JSON object string. As " is blacklisted, need to use \ then inject in the JSON key. (double used payload)
 
 
 PWN
-Env var stack shift
+    Env var stack shift
 
 
 Express JS path traversal in url segment
@@ -27,7 +28,6 @@ Race condition with CTRL-C bash script causing the child process to still exist 
 
 Binary search flag with code golf
 Do a prototype pollution exploit! Gives redirect ->
-Parameter injected into javascript in html, first string then into JSON object key. As " is blacklisted, need to use \ then inject in the JSON key. (double used payload)
 
 
 Proc enumeration via lfi
