@@ -4,7 +4,7 @@ services:
     build: ./jamespc
     cap_add:
       - LINUX_IMMUTABLE
-    
+
   randalpc:
     build: ./randalpc
 
@@ -13,9 +13,14 @@ services:
 
   startingpoint:
     build: ./startingpoint
+    ports:
+      - 2222:22
 
   tompc:
     build: ./tompc
 
   jwtbot:
     build: ./tompc/discordbot
+
+  finale:
+    build: ./finale

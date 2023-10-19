@@ -21,6 +21,8 @@ ROOT:
     /tmp/y -p
     To get a shell with euid root
 
+    Can read hint.txt
+
 randalpc
 
 FOOTHOLD:
@@ -52,3 +54,13 @@ FOOTHOLD:
     I give a zip file to crack
     The zip file contains a png file of the internal network
     Credentials to join the foothold machine are there too
+
+
+Loose ends:
+    randalpc needs a root part, then you will have shell as root
+    tompc gives you a flag.txt file
+
+What I could do:
+    Give a tiny slice of the password with each finale
+    In startingpoint, once you get root, you are informed of a secret ssh machine which you can ssh to
+    

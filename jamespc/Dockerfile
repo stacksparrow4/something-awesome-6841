@@ -37,6 +37,9 @@ RUN echo 'james ALL=(ALL) NOPASSWD: /home/james/admincmd/checkstats' >> /etc/sud
 
 WORKDIR /
 
+# setup hint
+COPY ./hint.txt /root/
+
 # setup supervisord
 COPY supervisord.conf /etc/supervisor/supervisord.conf
 
