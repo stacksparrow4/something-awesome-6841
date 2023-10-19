@@ -38,6 +38,13 @@ tompc:
 FOOTHOLD:
     Get password using CAPS lock XSS
 
+USER:
+    Use \ to escape the first quote, then use a payload to get rce from the second
+
+ROOT:
+    Read the source code of a discord bot
+    Use a race condition + sqli with multiple discord users to access
+
 
 startingpoint:
 

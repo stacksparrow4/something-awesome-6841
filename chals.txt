@@ -14,6 +14,10 @@ TOMPC
     xss with caps lock and count limit
     Parameter injected into JSON object string. As " is blacklisted, need to use \ then inject in the JSON key. (double used payload)
 
+    Discordbot
+        Flag exists for 5 seconds
+        You are rate limited per username for 5 seconds
+
 
 PWN
     Env var stack shift
