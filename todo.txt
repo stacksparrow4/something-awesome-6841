@@ -1,0 +1,5 @@
+Test everything is solvable
+Deploy
+Add bot to discord server
+
+Run the ctf!

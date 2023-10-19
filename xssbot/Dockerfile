@@ -17,4 +17,6 @@ RUN npm ci
 
 COPY ./ ./
 
+EXPOSE 1337
+
 CMD node index.js

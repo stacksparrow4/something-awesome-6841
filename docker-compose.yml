@@ -4,18 +4,28 @@ services:
     build: ./jamespc
     cap_add:
       - LINUX_IMMUTABLE
+    ports:
+      - 9001:80
 
   randalpc:
     build: ./randalpc
+    ports:
+      - 9002:80
 
   xssbot:
     build: ./xssbot
 
   startingpoint:
     build: ./startingpoint
+    cap_add:
+      - LINUX_IMMUTABLE
+    ports:
+      - 2222:22
 
   tompc:
     build: ./tompc
+    ports:
+      - 9003:3000
 
   jwtbot:
     build: ./tompc/discordbot

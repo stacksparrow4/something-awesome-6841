@@ -27,5 +27,8 @@
 2.5hrs = 14hrs
 
 19/10/2023:
-    1:30pm - 6pm
+    1:30pm - 6pm Completed full routes for each challenge. Added extra challenges including root for randal, and finale challenge
 4.5hrs = 18.5hrs
+
+20/10/2023
+    8am - 8:30am Started tying all the loose ends together, including making the XSSbot functional

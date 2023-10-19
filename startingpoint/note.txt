@@ -1,0 +1,14 @@
+Hi, welcome to my server!
+I'm Hamish and I have a few friends around here, namely James, Randal, Tom, and Daniel.
+They have each been setting up their websites nearby, you should check them out!
+James: http://stacksparrow4.xyz:9001/
+Randal: http://stacksparrow4.xyz:9002/
+Tom: http://stacksparrow4.xyz:9003/
+
+Daniel seems quite secretive, but it looks like he did give me sudo permission to run something on this machine. Maybe you should check it out?
+
+Side note: You can get my friends to visit urls on their websites like follows:
+giverandalurl.sh http://stacksparrow4.xyz:9002/somepage
+givetomurl.sh http://stacksparrow4.xyz:9003/somepage
+
+James doesn't like visiting his site.

@@ -17,4 +17,7 @@ COPY ./root/funprogram /usr/local/bin/funprogram
 
 COPY ./hint.txt /root/hint.txt
 
-CMD mkdir -p /run/sshd && /usr/sbin/sshd -D
+COPY ./triggerbot.sh ./giverandalurl.sh ./givetomurl.sh /usr/local/bin/
+COPY ./note.txt ./
+
+CMD chattr +i ./note.txt && mkdir -p /run/sshd && /usr/sbin/sshd -D
