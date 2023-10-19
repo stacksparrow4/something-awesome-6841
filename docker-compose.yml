@@ -13,8 +13,6 @@ services:
 
   startingpoint:
     build: ./startingpoint
-    ports:
-      - 2222:22
 
   tompc:
     build: ./tompc
@@ -24,3 +22,5 @@ services:
 
   finale:
     build: ./finale
+    ports:
+      - 2222:22

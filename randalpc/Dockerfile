@@ -22,7 +22,7 @@ EXPOSE 80
 COPY ./root/safepickle.py /usr/local/bin/safepickle
 RUN chmod +x /usr/local/bin/safepickle
 
-COPY ./example.safepkl /home/randal
+COPY ./root/example.safepkl /home/randal
 
 RUN echo 'randal ALL=(ALL) NOPASSWD: /usr/local/bin/safepickle' >> /etc/sudoers
 
