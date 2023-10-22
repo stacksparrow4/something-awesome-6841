@@ -19,8 +19,15 @@ app.get("/secretnotes", (req, res) => {
 });
 
 app.get("/welcomer", (req, res) => {
+  const n = (req.query.name || "UNNAMED").toUpperCase();
+
+  if (n.indexOf("SCRIPT") >= 0 || n.length > 180) {
+    res.send("Hacking detected: either request too long or script tags");
+    return;
+  }
+
   res.render("pages/welcomer", {
-    name: (req.query.name || "UNNAMED").toUpperCase(),
+    name: n,
   });
 });
 
