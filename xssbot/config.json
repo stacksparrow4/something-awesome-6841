@@ -8,7 +8,7 @@
         }
     },
     "9e8022da832dbc0d2e09be5c9441e54d31ed39a18d34b0a9e853ed1c2205457a": {
-        "baseurl": "http://tompc",
+        "baseurl": "http://tompc:3000",
         "cookie": {
             "name": "admin_secret",
             "value": "secret_admin_token_that_gives_admin_access",
