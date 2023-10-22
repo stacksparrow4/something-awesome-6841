@@ -58,12 +58,7 @@ app.post("/debug", checkAdmin, (req, res) => {
 
   fs.writeFileSync(
     filePath,
-    `module.exports = {
-      "name": "${req.body.name}",
-      "${req.body.name}": {
-        "status": 1
-      }
-    }`
+    `module.exports = { "name": "${req.body.name}", "${req.body.name}": { "status": 1 } }`
   );
 
   const rendered = require(filePath);
