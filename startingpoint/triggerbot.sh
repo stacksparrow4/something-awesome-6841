@@ -10,5 +10,5 @@ if ! grep -qE '^https?://[A-Za-z.:0-9-]+/' <<< "$2"; then
     exit 1
 fi
 
-url=$(sed -E 's/^https?:\/\/[A-Za-z.:0-9-]+\///' <<< "$2")
+url=$(sed -E 's/^https?:\/\/[A-Za-z.:0-9-]+\///' <<< "$2" | sed 's/"/\"/')
 curl -X POST http://xssbot:1337/visit -H 'Content-Type: application/json' -d "{\"runHash\": \"$1\", \"url\": \"$url\"}"
