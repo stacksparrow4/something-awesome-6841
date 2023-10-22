@@ -16,6 +16,8 @@ COPY config/filestorage.conf /etc/nginx/sites-available/filestorage
 RUN ln -s /etc/nginx/sites-available/filestorage /etc/nginx/sites-enabled/ && \
     unlink /etc/nginx/sites-enabled/default
 
+RUN sed -i 's/www-data/randal/g' /etc/php/7.4/fpm/pool.d/www.conf
+
 EXPOSE 80
 
 # Setup root part
