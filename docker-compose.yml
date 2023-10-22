@@ -6,14 +6,17 @@ services:
       - LINUX_IMMUTABLE
     ports:
       - 9001:80
+    restart: unless-stopped
 
   randalpc:
     build: ./randalpc
     ports:
       - 9002:80
+    restart: unless-stopped
 
   xssbot:
     build: ./xssbot
+    restart: unless-stopped
 
   startingpoint:
     build: ./startingpoint
@@ -21,14 +24,18 @@ services:
       - LINUX_IMMUTABLE
     ports:
       - 2222:22
+    restart: unless-stopped
 
   tompc:
     build: ./tompc
     ports:
       - 9003:3000
+    restart: unless-stopped
 
   jwtbot:
     build: ./tompc/discordbot
+    restart: unless-stopped
 
   finale:
     build: ./finale
+    restart: unless-stopped
