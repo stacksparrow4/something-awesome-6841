@@ -17,7 +17,11 @@ app.post("/visit", async (req, res) => {
 
   const { baseurl, cookie } = config[runHash];
 
-  await visit(baseurl + "/" + url, cookie);
+  const toVisit = baseurl + "/" + url;
+
+  console.log(`Visiting: ${toVisit}`);
+
+  await visit(toVisit, cookie);
 
   res.json({ success: true });
 });
