@@ -28,6 +28,8 @@ RUN echo 'randal ALL=(ALL) NOPASSWD: /usr/local/bin/safepickle' >> /etc/sudoers
 
 COPY ./hint.txt /root/hint.txt
 
+RUN echo "randal:KzsRCywroBPdLrCV" | chpasswd
+
 # Setup supervisord
 COPY supervisord.conf /etc/supervisor/supervisord.conf
 
