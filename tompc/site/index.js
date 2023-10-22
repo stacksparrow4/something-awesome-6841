@@ -20,7 +20,7 @@ app.get("/secretnotes", (req, res) => {
 
 app.get("/welcomer", (req, res) => {
   res.render("pages/welcomer", {
-    name: req.query.name.toUpperCase() || "UNNAMED",
+    name: (req.query.name || "UNNAMED").toUpperCase(),
   });
 });
 
