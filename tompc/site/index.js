@@ -54,11 +54,11 @@ app.post("/debug", checkAdmin, (req, res) => {
     return;
   }
 
-  const filePath = __dirname + "/temp.json";
+  const filePath = __dirname + "/temp.js";
 
   fs.writeFileSync(
     filePath,
-    `{
+    `module.exports = {
       "name": "${req.body.name}",
       "${req.body.name}": {
         "status": 1
