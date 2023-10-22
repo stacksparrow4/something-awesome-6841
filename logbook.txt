@@ -32,3 +32,6 @@
 
 20/10/2023
     8am - 8:30am Started tying all the loose ends together, including making the XSSbot functional
+
+22/10/2023
+    10am - ???? Hosting

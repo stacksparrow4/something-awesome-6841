@@ -32,5 +32,3 @@ services:
 
   finale:
     build: ./finale
-    ports:
-      - 2222:22
