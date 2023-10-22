@@ -1,0 +1,2 @@
+ssh hamish@stacksparrow4.xyz -p 2222
+# password: FPawioVpxniPxuYD

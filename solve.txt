@@ -7,7 +7,7 @@ FOOTHOLD:
     Get reverse shell
 USER:
     Create temp dir
-    touch '--files0-from'
+    touch -- '--files0-from'
     ln -s /home/james/secret-note.txt x
     sudo -u james /home/james/totalwc.sh
     Get password, change user using su
