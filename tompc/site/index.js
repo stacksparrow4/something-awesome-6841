@@ -54,7 +54,11 @@ app.post("/debug", checkAdmin, (req, res) => {
     return;
   }
 
-  const filePath = __dirname + "/temp.js";
+  const filePath =
+    __dirname +
+    "/temp" +
+    Math.floor(Math.random() * 100000000000000000).toString() +
+    ".js";
 
   fs.writeFileSync(
     filePath,
@@ -62,6 +66,8 @@ app.post("/debug", checkAdmin, (req, res) => {
   );
 
   const rendered = require(filePath);
+
+  fs.unlinkSync(filePath);
 
   res.json(rendered);
 });
