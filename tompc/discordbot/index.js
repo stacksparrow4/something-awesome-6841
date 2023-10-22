@@ -1,3 +1,5 @@
+// I've heard there is a new bot on the SecSoc discord server called jwt bot...
+
 const { Client, Events, GatewayIntentBits } = require("discord.js");
 const { token, flag } = require("./config.json");
 

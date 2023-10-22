@@ -3,7 +3,7 @@ FROM ubuntu:20.04
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y openssh-server sudo
 
 RUN useradd -m daniel
-RUN echo "daniel:potentilla_hovertrain_discapacitate" | chpasswd
+RUN echo "daniel:potentilla_hovertrain_discapacitate_8204723" | chpasswd
 
 COPY ./note.txt /home/daniel/note.txt
 

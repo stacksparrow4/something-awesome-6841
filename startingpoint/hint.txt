@@ -3,6 +3,7 @@ There is a machine that is hidden on this internal network that is called "final
 I have a user on that machine, but I won't tell you the password!
 
 If you want to steal my stuff, you'll need to find my 3 favourite words!
-And no-one knows them except my 3 best friends! My password is these 3 words
-joined together with underscores.
+And no-one knows them except my 3 best friends! My password is the following:
+
+favword1_favword2_favword3_8204723
 
