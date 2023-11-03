@@ -1,3 +1,13 @@
+startingpoint:
+
+FOOTHOLD:
+    I give a zip file to crack
+    The zip file contains a png file of the internal network
+    Credentials to join the foothold machine are there too
+
+ROOT:
+    Solve ret into env var challenge
+
 jamespc
 
 FOOTHOLD:
@@ -27,7 +37,7 @@ randalpc
 
 FOOTHOLD:
     Use XSS to get access to admin page. Use something like
-    x' onfocus=alert(1) name='foo
+    x' onfocus=alert(1) autofocus a='
     And then a url that has #foo
 USER:
     Use path traversal in the dirname to upload authorized_key to .ssh
@@ -46,24 +56,6 @@ USER:
 ROOT:
     Read the source code of a discord bot
     Use a race condition + sqli with multiple discord users to access
-
-
-startingpoint:
-
-FOOTHOLD:
-    I give a zip file to crack
-    The zip file contains a png file of the internal network
-    Credentials to join the foothold machine are there too
-
-
-Loose ends:
-    randalpc needs a root part, then you will have shell as root
-    tompc gives you a flag.txt file
-
-What I could do:
-    Give a tiny slice of the password with each finale
-    In startingpoint, once you get root, you are informed of a secret ssh machine which you can ssh to
-    
 
 finale:
     Bash argument injection
